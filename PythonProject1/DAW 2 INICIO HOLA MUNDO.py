@@ -123,5 +123,16 @@ for j in range(0,5):
     azar=random.randint(1,6)
     print(azar)
 
-print(j)
+# print(j)
 print(azar)
+#para mostrar 2 variables juntos     print(dado1,dado2) la , es el espacio
+
+#max y min
+mayor=max(34.5,4,5,56,7,4,332,5,0.43)
+print(mayor)
+menor=min(34.5,4,5,56,7,4,332,5,0.43)
+print(menor)
+
+#convertir a string cualquier cosa con str
+texto ="el numero es "+str(45)
+print(texto)
