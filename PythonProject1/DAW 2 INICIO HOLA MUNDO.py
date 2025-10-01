@@ -133,6 +133,88 @@ print(mayor)
 menor=min(34.5,4,5,56,7,4,332,5,0.43)
 print(menor)
 
-#convertir a string cualquier cosa con str
-texto ="el numero es "+str(45)
-print(texto)
+# #convertir a string cualquier cosa con str
+# texto ="el numero es "+str(45)
+# print(texto)
+#
+# #como se comportan las cadenas de textos
+# texto1 ="hola mundo"
+# print(texto1[3:8])#te devuelve una cadena nueva con solo del 3 al 8 "a mun"
+# print(texto1[:8])#empieza del 0 hasta el 8
+# print(texto1[3:])#empieza del 3 hasta el final
+# print(texto1[3])#muestra solo el 3
+# print(texto1[-1])#empieza del final y te devuelve o
+# print(texto1[-5:-2])#para RECORRER CADENAS  AL REVES
+# print(texto1[5:-2])
+# #esto nos va a pemitir  dar saltos
+# print(texto1[2:-2:2])#CON EL TECER PARAMETRO ESPECIFICAS EL SALTO DE CARACTERES
+# print(texto1[::2])#si quieres mostrar solo los de posicion par
+# print(texto1[1::2])#si quieres mostrar solo los de posicion inpar
+# #con - empiezas desde la derecha
+# print(texto1[::-1])#para dar la vuelta a al cadena
+# #las cadenas no se pueden modificar directamente
+#
+
+#errores frecuentes
+# texto2="hola"+"munfo" + "mi ammor"#concateniar
+# print(texto2)
+# print("hola","que","tal")#este es un print con 3 arguemtnos
+# print("hola"+"que"+"tal")#concatenar
+# texto2="hola"+"munfo" + "mi ammor"#concateniar
+# texto3="hola","munfo" , "mi ammor"#tupla aqui pilla todo ('hola', 'munfo', 'mi ammor') esto es lo que muestra si la uso fuera de los parentesis y sirve para crear una tupla
+# print(texto3)
+
+
+texto2="hola "+"munfo " + "mi aMmor"+str(33)#concateniar
+print(texto2)
+print("hola",33)
+for caracter in texto2 :
+    print(caracter,end="-")
+print("\n",len(texto2))#te devuelve la longitud  de lo que sea
+for posicion in range(0,len(texto2)):#rrecorremos cadena
+    print(posicion,"-", texto2[posicion])
+
+#para mayusculas
+print(texto2.upper())
+print(texto2[2:4].upper())
+
+#minusculas
+print(texto2.lower())
+#cambiar mayus minus invirtiendolas
+print(texto2.swapcase())
+
+#find me permite encontrar una subcadena dentro de una cadena y me devuelve la posicion si no aparece me devuelve -1
+print(texto2.find("a"))#te devuelve posicion
+#si hay mas de 1 encontrados te devuelve la posicion del primero
+print(texto2.find("x"))
+print(texto2.find("xxxx"))#busca una subcadena
+# count me devuelve cuantas veces aparece
+print(texto2.count("a"))
+#iterar es meterlas en un bucle
+print(texto2[4:].find("a"))# aqui buscamos la segunda a
+
+#replace sustituir
+print(texto2.replace("a","ge"))
+
+print(texto2[4:].find("a"))# esto esto es una cadena nueva creada cadena !!MAL NO USAR da resultado erroneo!!
+print( texto2.find("o",4))#usar este metodo ya que el otro te la la poscion respecto a la subcadena es decir que la posicion no es correcta
+
+print(texto2.replace("a","e",1)) #aqui solo cambia la primera a es un limite
+
+# switch de  pyton que se llama match
+salir =False
+while salir==False:
+    numero =input("mete opci")
+
+    match numero:
+        case "sigue":
+            print("numero 1")
+        case "n":## si es  2 o 3
+            print("numero 2")
+        case "S":
+            print()
+            salir=True
+        case _:
+            print("holiii")#valor por defecto y ya no se usan breaks
+    print("FIN")
+print("saliste")
